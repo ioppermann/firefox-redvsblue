@@ -1,0 +1,6 @@
+content	redvsblue	jar:chrome/redvsblue.jar!/content/
+locale	redvsblue	en	jar:chrome/redvsblue.jar!/locale/en/
+locale	redvsblue	de	jar:chrome/redvsblue.jar!/locale/de/
+skin	redvsblue	classic/1.0	jar:chrome/redvsblue.jar!/skin/
+
+overlay	chrome://browser/content/browser.xul	chrome://redvsblue/content/redvsblueOverlay.xul

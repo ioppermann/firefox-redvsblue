@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="redvsblue.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://redvsblue/locale/redvsblue.dtd">
+
+<window id="pacman-main-window" title="Red vs. Blue"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	onload="redvsblueInitGame()"
+	onclose="redvsblueQuitGame()">
+
+	<stringbundleset id="stringbundleset">
+		<stringbundle id="redvsblue-stringbundle" src="chrome://redvsblue/locale/redvsblue.properties"/>
+	</stringbundleset>
+
+	<script type="application/x-javascript" src="chrome://redvsblue/content/scripts/preferences.js"/>
+	<script type="application/x-javascript" src="chrome://redvsblue/content/scripts/highscores.js"/>
+	<script type="application/x-javascript" src="chrome://redvsblue/content/scripts/windows.js"/>
+	<script type="application/x-javascript" src="chrome://redvsblue/content/scripts/redvsbluegame.js"/>
+
+	<commandset id="redvsblue-commands">
+		<command id="cmd.new" oncommand="redvsblueNewGame();"/>
+		<command id="cmd.start" oncommand="redvsblueStartGame();"/>
+		<command id="cmd.highscores" oncommand="redvsblueShowHighscores();"/>
+
+		<command id="cmd.about" oncommand="redvsblueInfo();"/>
+	</commandset>
+
+	<keyset id="redvsblue-keys">
+		<key id="key.new" key="&redvsblue.key-new;" command="cmd.new"/>
+		<key id="key.highscores" key="&redvsblue.key-highscores;" command="cmd.highscores"/>
+		<key id="key.start" keycode="&redvsblue.key-start;" command="cmd.start"/>
+	</keyset>
+
+	<menubar id="redvsblue-toolbar">
+		<menu id="btn.new" label="&redvsblue.new;" accesskey="&redvsblue.key-new-menu;">
+			<menupopup>
+				<menuitem id="redvsblue-speed-normal" type="radio" name="redvsbluespeed" label="&redvsblue.speed-normal;" oncommand="redvsblueNewGame(1);"/>
+				<menuitem id="redvsblue-speed-fast" type="radio" name="redvsbluespeed" label="&redvsblue.speed-fast;" oncommand="redvsblueNewGame(2);"/>
+			</menupopup>
+		</menu>
+		<menu label="&redvsblue.options;">
+			<menupopup>
+				<menuitem id="btn.highscores" label="&redvsblue.highscores;" command="cmd.highscores" accesskey="&redvsblue.key-highscores-menu;"/>
+				<menuseparator/>
+				<menuitem id="btn.about" label="&redvsblue.about;" command="cmd.about"/>
+			</menupopup>
+		</menu>
+	</menubar>
+
+	<stack id="redvsblue-main" class="redvsblue">
+		<vbox>
+			<stack id="redvsblue-spielfeld-stack" style="margin-bottom: 5px">
+				<hbox>
+					<hbox style="width: 350px; height: 350px; background-color: white; border: 2px solid black; border-left: 5px solid red; margin: 5px 0 0 10px"></hbox>
+					<hbox style="width: 350px; height: 350px; background-color: white; border: 2px solid black; border-right: 5px solid blue; margin: 5px 10px 0 0"></hbox>
+				</hbox>
+			</stack>
+			<hbox>
+				<spacer width="10px"/>
+				<description id="redvsblue-hud-redok" value="5 OK" style="color: red"/>
+				<spacer flex="1"/>
+				<description id="redvsblue-hud-messages" value=""/>
+				<spacer flex="1"/>
+				<description id="redvsblue-hud-blueok" value="5 OK" style="color: blue"/>
+				<spacer width="10px"/>
+			</hbox>
+		</vbox>
+	</stack>
+</window>

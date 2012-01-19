@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE dialog SYSTEM "chrome://redvsblue/locale/redvsblue.dtd">
+
+<dialog id="redvsblue-highscores-name"
+        xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	title="&redvsblue.hs-name-title;"
+	buttons="accept"
+	ondialogaccept="redvsblueSetHighscore();"
+	onunload="//redvsblueShowHighscores();">
+
+	<script type="application/x-javascript" src="chrome://redvsblue/content/scripts/preferences.js"/>
+	<script type="application/x-javascript" src="chrome://redvsblue/content/scripts/highscores.js"/>
+	<script type="application/x-javascript" src="chrome://redvsblue/content/scripts/windows.js"/>
+
+<vbox>
+	<hbox>
+		<spacer flex="1"/>
+		<description style="font-weight: bold">&redvsblue.hs-name-congrat;</description>
+		<spacer flex="1"/>
+	</hbox>
+	<description>&redvsblue.hs-name-bla1;</description>
+	<spacer height="16"/>
+	<description>&redvsblue.hs-name-bla2;</description>
+	<textbox id="redvsblue-highscore-name" maxlength="32"/>
+</vbox>
+
+
+</dialog>

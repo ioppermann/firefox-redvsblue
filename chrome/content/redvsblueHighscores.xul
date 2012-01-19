@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE dialog SYSTEM "chrome://redvsblue/locale/redvsblue.dtd">
+
+<dialog id="pacman-highscores"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	title="&redvsblue.hs-title;"
+	buttons="accept"
+	onload="redvsblueLoadHighscores();">
+
+	<script type="application/x-javascript" src="chrome://redvsblue/content/scripts/preferences.js"/>
+	<script type="application/x-javascript" src="chrome://redvsblue/content/scripts/highscores.js"/>
+
+<vbox flex="1" width="300" style="text-align: center">
+	<description style="font-weight: bold">&redvsblue.hs-titlebig;</description>
+	<spacer height="1em"/>
+	<listbox id="highscores-list">
+		<listhead>
+			<listheader label="&redvsblue.hs-place;"/>
+			<listheader label="&redvsblue.hs-name;"/>
+			<listheader label="&redvsblue.hs-time;"/>
+		</listhead>
+
+		<listcols>
+			<listcol/>
+			<listcol flex="1"/>
+			<listcol/>
+		</listcols>
+	</listbox>
+</vbox>
+
+</dialog>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<overlay id="redvsblueOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript" src="chrome://redvsblue/content/scripts/redvsbluegame.js"/>
+<script type="application/x-javascript" src="chrome://redvsblue/content/scripts/windows.js"/>
+
+<menupopup id="menu_ToolsPopup">
+	<menuitem image="chrome://redvsblue/skin/images/logosmall.png" class="menuitem-iconic" id="redvsblue-menuitem" label="Red vs. Blue" oncommand="redvsblueLaunchGame()" insertbefore="devToolsSeparator"/>
+</menupopup>
+
+</overlay>

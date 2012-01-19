@@ -1,0 +1,26 @@
+<!ENTITY redvsblue.new "New Game">
+<!ENTITY redvsblue.highscores "Highscores...">
+<!ENTITY redvsblue.about "About...">
+<!ENTITY redvsblue.options "Options">
+
+<!ENTITY redvsblue.speed-normal "Normal">
+<!ENTITY redvsblue.speed-fast "Fast">
+
+<!ENTITY redvsblue.hs-title "Highscores">
+<!ENTITY redvsblue.hs-titlebig "H I G H S C O R E S">
+<!ENTITY redvsblue.hs-place "Place">
+<!ENTITY redvsblue.hs-name "Name">
+<!ENTITY redvsblue.hs-time "Time">
+<!ENTITY redvsblue.hs-name-title "New Highscore">
+<!ENTITY redvsblue.hs-name-congrat "C O N G R A T U L A T I O N">
+<!ENTITY redvsblue.hs-name-bla1 "You made it into the highscore list with your score!">
+<!ENTITY redvsblue.hs-name-bla2 "Please enter your name (32 letters max.)">
+
+<!ENTITY redvsblue.about-title "About Red vs. Blue">
+
+<!ENTITY redvsblue.key-highscores "h">
+<!ENTITY redvsblue.key-start " ">
+<!ENTITY redvsblue.key-new "n">
+
+<!ENTITY redvsblue.key-highscores-menu "H">
+<!ENTITY redvsblue.key-new-menu "N">
